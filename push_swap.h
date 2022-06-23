@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: AAIT-MAS <AAIT-MAS@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 21:54:08 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/23 00:30:37 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/23 20:46:40 by AAIT-MAS         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ int		offset_count(int size);
 int		check_if_exist(int to_find, t_list	*stack);
 void	add_av_tostack(char	**av,int ac, t_list **stack);
 void	sorting(t_list ** stack_a, t_list ** stack_b, int *sort_tab);
+int	check_ifupdown(int	tab, t_list *stack);
+
 
 #endif

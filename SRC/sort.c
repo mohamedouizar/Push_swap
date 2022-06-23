@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: AAIT-MAS <AAIT-MAS@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:02:45 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/23 07:33:07 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/23 20:47:25 by AAIT-MAS         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,14 +93,16 @@ void	big_sort(t_list **stack_a, int *tab,t_list **stack_b)
 	start = mid - offset;
 	end = mid + offset;
 	cmp = 0;
+	// printf("lstsizeb is %d\n",ft_lstsize((*stack_b)));
 	
-
+	// t_list *tmpstack_a = *stack_a;
+	// t_list *tmpstack_b = *stack_b;
 	// printf("ofsett is ; {%d}\n",offset);
 	// printf("mid  is ; {%d}\n",mid);
 	// printf("********************size   is ; {%d}\n",s);
 	// printf("****last in stack a    is ; {%d}\n", lastin_stack((*stack_a)));
 	
-	while(ft_lstsize(*stack_b) <= end - start)
+	while(*stack_a )
 	{
 		//printf("...%d...%d\n", start, end);
 		if ((*stack_a)->content >= tab[start] && (*stack_a)->content <= tab[end])
@@ -110,7 +112,14 @@ void	big_sort(t_list **stack_a, int *tab,t_list **stack_b)
 				ft_rot(stack_b, 'b');
 		}
 		else
+		{
+			
 			ft_rot(stack_a, 'a');
+			if (check_ifupdown(tab[s], *stack_a) == 0)
+				ft_rot(stack_a, 'a');
+			else
+				ft_rrot(stack_a, 'a');
+		}
 		start -= offset;
 		if (start < 0)
 			start = 0;
@@ -120,6 +129,7 @@ void	big_sort(t_list **stack_a, int *tab,t_list **stack_b)
 	}
 	// printf("********************size   is ; {%d}\n",s);
 	// printf("bigger sorted tab is %d\n", tab[s]);
+	
 	while ((*stack_b))
 	{
 	

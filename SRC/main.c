@@ -3,42 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: AAIT-MAS <AAIT-MAS@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 10:03:58 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/23 07:33:22 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/23 20:49:46 by AAIT-MAS         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	check_ifupdown(int	tab, t_list **stack)
+int	check_ifupdown(int	tab, t_list *stack)
 {
-	int	mid = 6 / 2;
-	int	cmp;
-//	int	cmp2;
-
-	cmp = 0;
-	printf("lstsize is %d\n",mid);
-	while (cmp < 6 )
-	{
-		if (tab == (*stack)->content)
-			break;
-		cmp++;
-		(*stack) = (*stack)->next;
-	}
-	if (cmp <= mid)
-	{
-		printf("up");
-		return 0;
-	}
-	if (cmp >= mid)
-	{
+	
+	int	mid = ft_lstsize(stack) / 2 ;
+// 	int	cmp;
+// //	int	cmp2;
+	 
+// 	cmp = 0;
+// 	printf("lstsize is %d\n",mid);
+// 	while (cmp < 6 )
+// 	{
+// 		if (tab == (*stack)->content)
+// 			break;
+// 		cmp++;
+// 		(*stack) = (*stack)->next;
+// 	}
+// 	if (cmp <= mid)
+// 	{
+// 		printf("up");
+// 		return 0;
+// 	}
+// 	if (cmp >= mid)
+// 	{
 		
-		printf("down");
-		return 1;
+// 		printf("down");
+// 		return 1;
+// 	}
+	int count;
+	count = 1;
+	while (stack)
+	{
+		if (stack->content == tab)
+			break;
+		count++;
+		stack = stack->next;
 	}
-	return (cmp + 1);
+	if (count > mid)
+		return (1);
+	return (0);
 }
 
 int	main(int ac, char **av)
@@ -56,12 +68,13 @@ int	main(int ac, char **av)
 		check_sorted(stack);
 		tab = convert_ls_to_array(stack);
 		sorting(&stack, &stackb, tab);
-		while (stack)
-		{
-			printf("\n|stack a|\t%d\n", stack->content);
-			stack = stack->next;
-		}
+		// while (stack)
+		// {
+		// 	printf("\n|stack a|\t%d\n", stack->content);
+		// 	stack = stack->next;
+		// }
 		// printf("\n\n\n");
+		// printf("==>%d/n", ft_lstsize(stack));
 		// while (stackb)
 		// {
 		// 	printf("\n|stack b|\t%d", stackb->content);
