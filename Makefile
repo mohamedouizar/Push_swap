@@ -9,6 +9,9 @@ SRCS = SRC/main.c \
 		SRC/sort.c \
 		SRC/sorting_util.c \
 		SRC/sort_util_2.c \
+		ft_printf/ft_printf.c \
+		ft_printf/ft_converthex.c \
+		ft_printf/func1.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -21,7 +24,7 @@ RM = rm -f
 all:    $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -fsanitize=address -g 
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -g 
 	
 
 clean:

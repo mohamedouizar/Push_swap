@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: AAIT-MAS <AAIT-MAS@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 21:54:08 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/23 20:46:40 by AAIT-MAS         ###   ########.fr       */
+/*   Updated: 2022/06/24 16:13:51 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "ft_printf/ft_printf.h" 
 
 typedef struct s_list
 {

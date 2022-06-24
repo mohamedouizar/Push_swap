@@ -1,6 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/mouizar/Desktop/p_s'
+make: Entering directory `/Users/mouizar/Desktop/ouizar_pushswap'
 cc -g -Werror -Wall -Wextra   -c -o SRC/main.o SRC/main.c
+ 
 cc -g -Werror -Wall -Wextra   -c -o SRC/func00.o SRC/func00.c
 cc -g -Werror -Wall -Wextra   -c -o SRC/func01.o SRC/func01.c
 cc -g -Werror -Wall -Wextra   -c -o SRC/func02.o SRC/func02.c
@@ -8,7 +9,11 @@ cc -g -Werror -Wall -Wextra   -c -o SRC/linked_list.o SRC/linked_list.c
 cc -g -Werror -Wall -Wextra   -c -o SRC/operation.o SRC/operation.c
 cc -g -Werror -Wall -Wextra   -c -o SRC/sort.o SRC/sort.c
 cc -g -Werror -Wall -Wextra   -c -o SRC/sorting_util.o SRC/sorting_util.c
+ 
 cc -g -Werror -Wall -Wextra   -c -o SRC/sort_util_2.o SRC/sort_util_2.c
-cc -g -Werror -Wall -Wextra SRC/main.o SRC/func00.o SRC/func01.o SRC/func02.o SRC/linked_list.o SRC/operation.o SRC/sort.o SRC/sorting_util.o SRC/sort_util_2.o -o push_swap
-make: Leaving directory `/Users/mouizar/Desktop/p_s'
+cc -g -Werror -Wall -Wextra   -c -o ft_printf/ft_printf.o ft_printf/ft_printf.c
+cc -g -Werror -Wall -Wextra   -c -o ft_printf/ft_converthex.o ft_printf/ft_converthex.c
+cc -g -Werror -Wall -Wextra   -c -o ft_printf/func1.o ft_printf/func1.c
+cc -g -Werror -Wall -Wextra SRC/main.o SRC/func00.o SRC/func01.o SRC/func02.o SRC/linked_list.o SRC/operation.o SRC/sort.o SRC/sorting_util.o SRC/sort_util_2.o ft_printf/ft_printf.o ft_printf/ft_converthex.o ft_printf/func1.o -o push_swap -g 
+make: Leaving directory `/Users/mouizar/Desktop/ouizar_pushswap'
  

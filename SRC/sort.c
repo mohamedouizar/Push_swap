@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: AAIT-MAS <AAIT-MAS@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:02:45 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/23 20:47:25 by AAIT-MAS         ###   ########.fr       */
+/*   Updated: 2022/06/24 23:15:08 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,77 +86,74 @@ void	big_sort(t_list **stack_a, int *tab,t_list **stack_b)
 	int	end;
 	int	s;
 	int	cmp;
-
+	
 	s = ft_lstsize((*stack_a)) - 1;
 	offset = offset_count(ft_lstsize((*stack_a)));
 	mid = ft_lstsize((*stack_a)) / 2;
 	start = mid - offset;
 	end = mid + offset;
 	cmp = 0;
-	// printf("lstsizeb is %d\n",ft_lstsize((*stack_b)));
-	
-	// t_list *tmpstack_a = *stack_a;
-	// t_list *tmpstack_b = *stack_b;
-	// printf("ofsett is ; {%d}\n",offset);
-	// printf("mid  is ; {%d}\n",mid);
-	// printf("********************size   is ; {%d}\n",s);
-	// printf("****last in stack a    is ; {%d}\n", lastin_stack((*stack_a)));
-	
-	while(*stack_a )
+
+	while (ft_lstsize((*stack_a)))
 	{
-		//printf("...%d...%d\n", start, end);
-		if ((*stack_a)->content >= tab[start] && (*stack_a)->content <= tab[end])
+		while(ft_lstsize(*stack_b) <= end - start)
 		{
-			ft_push(stack_b, stack_a, 'b');
-			if ((*stack_b)->content > tab[mid])
-				ft_rot(stack_b, 'b');
-		}
-		else
-		{
-			
-			ft_rot(stack_a, 'a');
-			if (check_ifupdown(tab[s], *stack_a) == 0)
-				ft_rot(stack_a, 'a');
-			else
-				ft_rrot(stack_a, 'a');
+				if ((*stack_a)->content >= tab[start] && (*stack_a)->content <= tab[end])
+				{
+					ft_push(stack_b, stack_a, 'b');
+					if ((*stack_b)->content < tab[mid])
+						ft_rot(stack_b, 'b');
+				}		
+				else
+					ft_rot(stack_a, 'a');
+			// printf("%d    %d .   %d .   \n", ft_lstsize(*stack_a), end - start, ft_lstsize(*stack_b));
 		}
 		start -= offset;
 		if (start < 0)
 			start = 0;
 		end += offset;
-		if (end > ft_lstsize((*stack_a)) - 1)
+		if (end > s)
 			end = s;
 	}
-	// printf("********************size   is ; {%d}\n",s);
-	// printf("bigger sorted tab is %d\n", tab[s]);
-	
+	//s--;
+		
 	while ((*stack_b))
 	{
 	
 		if (check_if_exist(tab[s], (*stack_b)))
-		 {
+		{
 			if ((*stack_b)->content == tab[s])
 			{
 		 		ft_push(stack_a, stack_b,'a');
 				s--;
 			}
-			else if ((cmp == 0 || (*stack_b)->content > lastin_stack((*stack_a))))
+			else if (cmp == 0 || (*stack_b)->content > lastin_stack((*stack_a)))
 			{
 				ft_push(stack_a, stack_b,'a');
-		 			ft_rot(stack_a, 'a');
-		 			cmp++;
+		 		ft_rot(stack_a, 'a');
+		 		cmp++;
 			}
 			else
-	 			ft_rot(stack_b, 'b');	
-		 }
-		else if (!(check_if_exist(tab[s], (*stack_b))))
+			{
+				if (check_ifupdown(tab[s], *stack_b) == 0)
+					ft_rot(stack_b, 'b');
+				else
+					ft_rrot(stack_b, 'b');
+			}
+		}
+		else if (!(check_if_exist(tab[s], (*stack_b))) && cmp > 0)
 		{
 		 	ft_rrot(stack_a, 'a');
 			cmp--;
 			s--;
 		}
 	}
-	while (cmp)
+	// if (cmp < 0)
+	// {
+	// 	printf("ooooh\n");
+	// 	exit (0);
+	// }
+	while (cmp > 0)
 	{
 		ft_rrot(stack_a, 'a');
 		cmp--;

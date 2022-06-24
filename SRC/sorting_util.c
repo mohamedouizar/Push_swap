@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:08:05 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/23 06:40:37 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/24 22:50:43 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,10 @@ int	*convert_ls_to_array(t_list *stack)
 
 int	offset_count(int size)
 {
-	if (size < 10)
-		return (size / 5);
-	else if (size < 150)
-		return (size / 13);
+	if (size < 150)
+		return (size / 8);
 	else
-		return (size / 13);
-		
-	return (0);
+		return (size / 22);
 }
 
 int	check_if_exist(int to_find, t_list	*stack)
