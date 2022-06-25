@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_util_2.c                                      :+:      :+:    :+:   */
+/*   func04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 00:29:00 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 22:59:53 by mouizar          ###   ########.fr       */
+/*   Created: 2022/06/25 22:04:39 by mouizar           #+#    #+#             */
+/*   Updated: 2022/06/25 22:05:16 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sorting(t_list ** stack_a, t_list ** stack_b, int *sort_tab)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	size;
+	t_list	*lastnode;
 
-	size = ft_lstsize((*stack_a));
-	if (size == 2)
-		ft_sort_2(stack_a);
-	else if (size == 3)
-		ft_sort_3(stack_a);
-	else if (size <= 15)
-		ft_sort_15(stack_a, stack_b);
+	if (*lst)
+	{
+		lastnode = ft_lstlast(*lst);
+		lastnode->next = new;
+	}
 	else
-		big_sort(stack_a, sort_tab, stack_b);
+		*lst = new;
 }

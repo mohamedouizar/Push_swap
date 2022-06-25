@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_util_2.c                                      :+:      :+:    :+:   */
+/*   instruction02.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 00:29:00 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 22:59:53 by mouizar          ###   ########.fr       */
+/*   Created: 2022/06/25 17:42:24 by mouizar           #+#    #+#             */
+/*   Updated: 2022/06/25 20:44:21 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sorting(t_list ** stack_a, t_list ** stack_b, int *sort_tab)
+void	ft_ss(t_list **stack_a, t_list **stack_b)
 {
-	int	size;
+	ft_swap((*stack_a), 0);
+	ft_swap((*stack_b), 0);
+}
 
-	size = ft_lstsize((*stack_a));
-	if (size == 2)
-		ft_sort_2(stack_a);
-	else if (size == 3)
-		ft_sort_3(stack_a);
-	else if (size <= 15)
-		ft_sort_15(stack_a, stack_b);
-	else
-		big_sort(stack_a, sort_tab, stack_b);
+void	ft_rr(t_list **stack_a, t_list **stack_b)
+{
+	ft_rot(&(*stack_a), 0);
+	ft_rot(&(*stack_b), 0);
+}
+
+void	ft_rrr(t_list **stack_a, t_list **stack_b)
+{
+	ft_rrot(&(*stack_a), 0);
+	ft_rrot(&(*stack_b), 0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   func02.c                                           :+:      :+:    :+:   */
+/*   func2b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 03:22:30 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 22:05:49 by mouizar          ###   ########.fr       */
+/*   Created: 2022/06/25 15:14:51 by mouizar           #+#    #+#             */
+/*   Updated: 2022/06/25 22:25:42 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,6 @@ int	ft_check_av(int ac, char **av)
 	ft_maxint(ac, av);
 	ft_empty_av(ac, av);
 	return (1);
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return (s1[i] - s2[i]);
 }
 
 void	check_sorted(t_list *stack)
@@ -48,7 +38,7 @@ void	add_av_tostack(char	**av, int ac, t_list **stack)
 {
 	int		i;
 
-	i = ac - 1;
+	i = ac -1;
 	while (i > 0)
 	{
 		ft_lstadd_front(stack, ft_lstnew(ft_atoi(av[i])));
@@ -56,8 +46,28 @@ void	add_av_tostack(char	**av, int ac, t_list **stack)
 	}
 }
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+size_t	ft_strlen(const char *s)
 {
-		new->next = *lst;
-		*lst = new;
+	size_t	len;
+
+	len = 0;
+	while (*(s + len))
+		len++;
+	return (len);
+}
+
+int	ft_av_digit(int arc, char **arv)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	j = 0;
+	while (i < arc)
+	{
+		if (!ft_s_digit(arv[i]))
+			exit(write(2, "Error\n", 6));
+		i++;
+	}
+	return (1);
 }

@@ -1,4 +1,5 @@
 NAME = push_swap
+B_NAME = checker
 
 SRCS = SRC/main.c \
 		SRC/func00.c \
@@ -9,11 +10,21 @@ SRCS = SRC/main.c \
 		SRC/sort.c \
 		SRC/sorting_util.c \
 		SRC/sort_util_2.c \
-		ft_printf/ft_printf.c \
-		ft_printf/ft_converthex.c \
-		ft_printf/func1.c \
+		SRC/func04.c \
+
+SRCS_BONUS = get_next_line/get_next_line.c \
+			 get_next_line/get_next_line_utils.c \
+			 bonus/main.c \
+			 bonus/check_av.c \
+			 bonus/func.c \
+			 bonus/func2b.c \
+			 bonus/instruction.c \
+			 bonus/ln_list.c \
+			 bonus/instruction02.c \
 
 OBJS = $(SRCS:.c=.o)
+
+B_OBJS = $(SRCS_BONUS:.c=.o)
 
 CC = cc -g
 
@@ -25,13 +36,16 @@ all:    $(NAME)
 
 $(NAME):$(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -g 
-	
+$(B_NAME):$(B_OBJS)
+	$(CC) $(CFLAGS) $(B_OBJS) -g -fsanitize=address -o $(B_NAME) 
+
+bonus: $(B_NAME)
 
 clean:
-		$(RM) $(OBJS) 
+		$(RM) $(OBJS) $(B_OBJS)
 
 fclean:    clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(B_NAME)
 
 re:    fclean all
 

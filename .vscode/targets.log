@@ -7,8 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
+make: *** No rule to make target `SRC/func04.o', needed by `push_swap'.  Stop.
 
-# Make data base, printed on Fri Jun 24 22:20:13 2022
+
+# Make data base, printed on Sat Jun 25 22:05:37 2022
 
 # Variables
 
@@ -18,6 +20,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # environment
 VSCODE_LOG_NATIVE = false
+# makefile (from `Makefile', line 15)
+SRCS_BONUS = get_next_line/get_next_line.c get_next_line/get_next_line_utils.c bonus/main.c bonus/check_av.c bonus/func.c bonus/func2b.c bonus/instruction.c bonus/ln_list.c bonus/instruction02.c 
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -26,33 +30,34 @@ VSCODE_LOG_NATIVE = false
 @F = $(notdir $@)
 # makefile
 CURDIR := /Users/mouizar/Desktop/ouizar_pushswap
- 
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 22)
+# makefile (from `Makefile', line 33)
 RM = rm -f
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 20)
+# makefile (from `Makefile', line 31)
 CFLAGS = -Werror -Wall -Wextra
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from `Makefile', line 16)
+# makefile (from `Makefile', line 25)
 OBJS = $(SRCS:.c=.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0000hk000044h/T/vscode-ipc-23bd0048-c6a8-4420-b6ba-b45d54c14196.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0000hk000044h/T/vscode-ipc-7c49977e-dcb9-4e5c-999a-026c14e9e99a.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.M5vQUAEGfW/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.aUpuWZP992/Render
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from `Makefile', line 27)
+B_OBJS = $(SRCS_BONUS:.c=.o)
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -60,7 +65,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HUsI7yeySs/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.mHLI0Ye4fg/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -69,6 +74,8 @@ VSCODE_PIPE_LOGGING = true
 PWD = /Users/mouizar/Desktop/ouizar_pushswap
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `Makefile', line 2)
+B_NAME = checker
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -93,11 +100,11 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# makefile (from `Makefile', line 3)
-SRCS = SRC/main.c SRC/func00.c SRC/func01.c SRC/func02.c SRC/linked_list.c SRC/operation.c SRC/sort.c SRC/sorting_util.c SRC/sort_util_2.c ft_printf/ft_printf.c ft_printf/ft_converthex.c ft_printf/func1.c 
+# makefile (from `Makefile', line 4)
+SRCS = SRC/main.c SRC/func00.c SRC/func01.c SRC/func02.c SRC/linked_list.c SRC/operation.c SRC/sort.c SRC/sorting_util.c SRC/sort_util_2.c SRC/func04.c 
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 18)
+# makefile (from `Makefile', line 29)
 CC = cc -g
 # default
 MAKE_VERSION := 3.81
@@ -128,15 +135,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000003.Electron
+XPC_SERVICE_NAME = com.microsoft.VSCode.1264
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x1090:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -145,8 +150,6 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -158,9 +161,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3414
+VSCODE_PID = 39106
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=3/101=3%
+# Load=74/1024=7%, Rehash=0, Collisions=8/106=8%
 
 # Pattern-specific Variable Values
 
@@ -168,9 +171,9 @@ VSCODE_PID = 3414
 
 # Directories
 
-# . (device 16777227, inode 2604117): 20 files, no impossibilities.
+# . (device 16777227, inode 2604117): 13 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -178,13 +181,30 @@ VSCODE_PID = 3414
 
 # Files
 
+# Not a target:
+bonus/func2b.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/ln_list.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/instruction.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 all: push_swap
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Successfully updated.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -194,9 +214,15 @@ all: push_swap
 #  File has not been updated.
 
 # Not a target:
+bonus/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 SRC/func00.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
+#  Last modified 2022-06-25 21:31:38
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -205,25 +231,22 @@ SRC/func00.o:
 # Not a target:
 SRC/sorting_util.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 16:57:52
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-ft_printf/ft_printf.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+get_next_line/get_next_line_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 SRC/func01.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -238,7 +261,7 @@ SRC/func01.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 11:25:31
+#  Last modified 2022-06-25 22:05:35
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -247,29 +270,43 @@ Makefile:
 # Not a target:
 SRC/func02.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-ft_printf/func1.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+bonus/instruction02.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bonus/func.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bonus: checker
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 34):
-	$(RM) $(NAME)
+#  commands to execute (from `Makefile', line 48):
+	$(RM) $(NAME) $(B_NAME)
 	
+
+# Not a target:
+get_next_line/get_next_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -280,16 +317,25 @@ fclean: clean
 # Not a target:
 SRC/linked_list.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
+checker: get_next_line/get_next_line.o get_next_line/get_next_line_utils.o bonus/main.o bonus/check_av.o bonus/func.o bonus/func2b.o bonus/instruction.o bonus/ln_list.o bonus/instruction02.o
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 40):
+	$(CC) $(CFLAGS) $(B_OBJS) -g -fsanitize=address -o $(B_NAME) 
+	
+
 # Not a target:
 SRC/sort.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 16:53:17
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -306,44 +352,33 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 31):
-	$(RM) $(OBJS) 
+#  commands to execute (from `Makefile', line 45):
+	$(RM) $(OBJS) $(B_OBJS)
 	
 
-# Not a target:
-ft_printf/ft_converthex.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-push_swap: SRC/main.o SRC/func00.o SRC/func01.o SRC/func02.o SRC/linked_list.o SRC/operation.o SRC/sort.o SRC/sorting_util.o SRC/sort_util_2.o ft_printf/ft_printf.o ft_printf/ft_converthex.o ft_printf/func1.o
+push_swap: SRC/main.o SRC/func00.o SRC/func01.o SRC/func02.o SRC/linked_list.o SRC/operation.o SRC/sort.o SRC/sorting_util.o SRC/sort_util_2.o SRC/func04.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-24 16:57:52
-#  File has been updated.
-#  Successfully updated.
+#  Last modified 2022-06-25 21:31:39
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 27):
+#  commands to execute (from `Makefile', line 38):
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -g 
 	
 
 # Not a target:
 SRC/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 16:38:56
+#  Last modified 2022-06-25 21:31:38
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 SRC/operation.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 13:19:30
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -352,14 +387,28 @@ SRC/operation.o:
 # Not a target:
 SRC/sort_util_2.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 16:08:00
+#  Last modified 2022-06-25 21:31:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
+# Not a target:
+bonus/check_av.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+SRC/func04.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 # files hash-table stats:
-# Load=21/1024=2%, Rehash=0, Collisions=0/54=0%
+# Load=30/1024=3%, Rehash=0, Collisions=1/71=1%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -371,6 +420,6 @@ SRC/sort_util_2.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jun 24 22:20:13 2022
+# Finished Make data base on Sat Jun 25 22:05:37 2022
 
  

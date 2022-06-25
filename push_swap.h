@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 21:54:08 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/24 16:13:51 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/25 22:59:21 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "ft_printf/ft_printf.h" 
+# include "get_next_line/get_next_line.h" 
 
 typedef struct s_list
 {
@@ -34,7 +34,7 @@ int		ft_av_dup(int arc, char **arv);
 int		ft_maxint(int ac, char **av);
 int		ft_empty_av(int ac, char **av);
 int		ft_check_av(int ac, char **av);
-int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strcmp( char *s1, char *s2);
 t_list	*ft_lstnew(int content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -50,14 +50,16 @@ void	ft_sort_2(t_list	**stack);
 void	ft_sort_3(t_list	**stack);
 void	ft_sort_15(t_list	**stacka, t_list	**stackb);
 void	ft_buble_sort(int *tab, int len);
-void	big_sort(t_list **stack_a, int *tab,t_list **stack_b);
+void	big_sort(t_list **stack_a, int *tab, t_list **stack_b);
 int		small_content_i(t_list	*stack);
 int		*convert_ls_to_array(t_list *stack);
 int		offset_count(int size);
 int		check_if_exist(int to_find, t_list	*stack);
-void	add_av_tostack(char	**av,int ac, t_list **stack);
-void	sorting(t_list ** stack_a, t_list ** stack_b, int *sort_tab);
-int	check_ifupdown(int	tab, t_list *stack);
-
+void	add_av_tostack(char	**av, int ac, t_list **stack);
+void	sorting(t_list **stack_a, t_list **stack_b, int *sort_tab);
+int		check_ifupdown(int tab, t_list *stack);
+void	ft_ss(t_list **stack_a, t_list **stack_b);
+void	ft_rr(t_list **stack_a, t_list **stack_b);
+void	ft_rrr(t_list **stack_a, t_list **stack_b);
 
 #endif
