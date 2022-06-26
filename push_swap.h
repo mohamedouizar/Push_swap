@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 21:54:08 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 22:59:21 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/26 17:25:30 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ typedef struct s_list
 	int				content;
 	struct s_list	*next;
 }t_list;
+
+typedef struct s_var
+{
+	int	offset;
+	int	mid;
+	int	start;
+	int	end;
+	int	s;
+	int cmp;
+}t_var;
 
 int		ft_isdigit(int c);
 long	ft_atoi(const char *str);

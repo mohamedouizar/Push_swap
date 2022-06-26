@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:08:05 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/24 22:50:43 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/26 00:03:36 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ int	small_content_i(t_list	*stack)
 	}
 	return (small_i);
 }
-
-
 
 int	*convert_ls_to_array(t_list *stack)
 {

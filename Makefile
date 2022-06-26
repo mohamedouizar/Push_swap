@@ -35,9 +35,9 @@ RM = rm -f
 all:    $(NAME)
 
 $(NAME):$(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -g 
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 $(B_NAME):$(B_OBJS)
-	$(CC) $(CFLAGS) $(B_OBJS) -g -fsanitize=address -o $(B_NAME) 
+	$(CC) $(CFLAGS) $(B_OBJS)  -o $(B_NAME) 
 
 bonus: $(B_NAME)
 
