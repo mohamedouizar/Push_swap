@@ -1,0 +1,16 @@
+	// 	while (stack)
+	// 	{
+	// 		printf("\n|stack a|\t%d", stack->content);
+	// 		stack = stack->next;
+	// 	}
+	// // 	printf("\n\n\n");
+		
+	// 	while (stackb)
+	// 	{
+	// 		printf("\n|stack b|\t%d", stackb->content);
+	// 		stackb = stackb->next;
+	// while (index < ft_lstsize(stack))
+	// 	{
+	// 		printf("%d sorted|%d|\n", index, tab[index]);
+	// 		index++;
+	// 	}

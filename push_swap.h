@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 21:54:08 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/26 17:25:30 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/26 19:33:33 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_var
 	int	start;
 	int	end;
 	int	s;
-	int cmp;
+	int	cmp;
 }t_var;
 
 int		ft_isdigit(int c);

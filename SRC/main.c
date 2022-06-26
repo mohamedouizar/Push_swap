@@ -6,22 +6,23 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 10:03:58 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 23:00:04 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/26 19:33:20 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	check_ifupdown(int	tab, t_list *stack)
+int	check_ifupdown(int tab, t_list *stack)
 {
-	
-	int	mid = ft_lstsize(stack) / 2 ;
-	int count;
+	int	mid;
+	int	count;
+
+	mid = ft_lstsize(stack) / 2 ;
 	count = 1;
 	while (stack)
 	{
 		if (stack->content == tab)
-			break;
+			break ;
 		count++;
 		stack = stack->next;
 	}
@@ -30,16 +31,15 @@ int	check_ifupdown(int	tab, t_list *stack)
 	return (0);
 }
 
-
-
-
 int	main(int ac, char **av)
 {
-	t_list	*stack = NULL;
+	t_list	*stack;
 	int		*tab;
 	int		index;
-	t_list	*stackb = NULL;
+	t_list	*stackb;
 
+	stackb = NULL;
+	stack = NULL;
 	index = 0;
 	if (ac > 1)
 	{
@@ -48,22 +48,5 @@ int	main(int ac, char **av)
 		check_sorted(stack);
 		tab = convert_ls_to_array(stack);
 		sorting(&stack, &stackb, tab);
-		
-	// 	while (stack)
-	// 	{
-	// 		printf("\n|stack a|\t%d", stack->content);
-	// 		stack = stack->next;
-	// 	}
-	// // 	printf("\n\n\n");
-		
-	// 	while (stackb)
-	// 	{
-	// 		printf("\n|stack b|\t%d", stackb->content);
-	// 		stackb = stackb->next;
-	// while (index < ft_lstsize(stack))
-	// 	{
-	// 		printf("%d sorted|%d|\n", index, tab[index]);
-	// 		index++;
-	// 	}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 10:56:08 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 10:56:18 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/26 19:36:55 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,29 +51,4 @@ t_list	*ft_lstlast(t_list *lst)
 	while (lst->next)
 		lst = lst->next;
 	return (lst);
-}
-
-int	lastin_stack(t_list *stack)
-{
-	if (stack == NULL)
-		exit(0);
-	while (stack->next)
-		stack = stack->next;
-	return (stack->content);
-}
-
-int	ft_lstsize(t_list *lst)
-{
-	t_list	*ptr;
-	int		count;
-
-	count = 0;
-	ptr = NULL;
-	ptr = lst;
-	while (ptr != NULL)
-	{
-		count++;
-		ptr = ptr->next;
-	}
-	return (count);
 }

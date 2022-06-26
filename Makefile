@@ -11,6 +11,7 @@ SRCS = SRC/main.c \
 		SRC/sorting_util.c \
 		SRC/sort_util_2.c \
 		SRC/func04.c \
+		SRC/sort2.c \
 
 SRCS_BONUS = get_next_line/get_next_line.c \
 			 get_next_line/get_next_line_utils.c \
@@ -20,6 +21,7 @@ SRCS_BONUS = get_next_line/get_next_line.c \
 			 bonus/func2b.c \
 			 bonus/instruction.c \
 			 bonus/ln_list.c \
+			 bonus/ln_list2.c \
 			 bonus/instruction02.c \
 
 OBJS = $(SRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 00:08:05 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/26 00:03:36 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/06/26 19:38:53 by mouizar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	check_if_exist(int to_find, t_list	*stack)
 {
 	while (stack)
 	{
-		if(stack->content == to_find)
+		if (stack->content == to_find)
 			return (1);
 		stack = stack->next;
 	}
