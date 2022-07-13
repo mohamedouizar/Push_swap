@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mohamedouizar <mohamedouizar@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 10:03:58 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/26 19:33:20 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/07/13 15:18:11 by mohamedouiz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,10 @@ int	main(int ac, char **av)
 {
 	t_list	*stack;
 	int		*tab;
-	int		index;
 	t_list	*stackb;
 
 	stackb = NULL;
 	stack = NULL;
-	index = 0;
 	if (ac > 1)
 	{
 		ft_check_av(ac, av);
@@ -49,4 +47,10 @@ int	main(int ac, char **av)
 		tab = convert_ls_to_array(stack);
 		sorting(&stack, &stackb, tab);
 	}
+			while (stack)
+		{
+			printf("\n|stack a|\t%d", stack->content);
+			stack = stack->next;
+		}
+	 	printf("\n\n\n");
 }

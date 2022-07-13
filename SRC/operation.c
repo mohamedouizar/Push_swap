@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operation.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mohamedouizar <mohamedouizar@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 01:44:02 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/25 21:33:47 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/07/08 16:49:58:33hamedouiz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,20 +71,17 @@ void	ft_rot(t_list **stack, char c)
 
 void	ft_rrot(t_list **stack, char c)
 {
-	t_list	*temp;
-	int		s;
+	t_list	*head;
 	int		cmp;
 
 	cmp = ft_lstsize((*stack));
 	if (cmp < 2)
 		return ;
-	s = ft_lstsize(*stack) * 2 - 1;
-	temp = ft_lstlast((*stack));
-	temp->next = *stack;
-	*stack = temp;
-	while (s--)
-		temp = temp->next;
-	temp->next = 0;
+	head = (*stack);
+	while (head->next->next)
+		head = head->next;
+	ft_lstadd_front(stack, head->next);
+	head->next = 0;
 	if (c == 'a')
 		ft_putstr_fd("rra\n", 1);
 	else if (c == 'b')

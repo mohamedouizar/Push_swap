@@ -25,10 +25,8 @@ size_t	ft_strlen(const char *s)
 int	ft_av_digit(int arc, char **arv)
 {
 	int	i;
-	int	j;
 
 	i = 1;
-	j = 0;
 	while (i < arc)
 	{
 		if (!ft_s_digit(arv[i]))
