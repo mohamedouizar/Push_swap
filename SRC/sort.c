@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouizar <mouizar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mohamedouizar <mohamedouizar@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 19:29:52 by mouizar           #+#    #+#             */
-/*   Updated: 2022/06/26 19:30:25 by mouizar          ###   ########.fr       */
+/*   Updated: 2022/07/19 01:24:12 by mohamedouiz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	stack_a_to_b(t_list **stack_a, t_list **stack_b, int *tab)
 				&& (*stack_a)->content <= tab[var.end])
 			{
 				ft_push(stack_b, stack_a, 'b');
-				if ((*stack_b)->content < tab[var.mid])
+				if ((*stack_b)->content <= tab[var.mid])
 					ft_rot(stack_b, 'b');
 			}		
 			else
